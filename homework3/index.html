@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script >
+		function isPass(grade){
+			var is_pass;
+			if(grade >=60){
+				is_pass="You pass";
+			}else  {
+				is_pass="You flunk";
+			}
+			document.getElementById("result").innerHTML=is_pass;
+		}
+	</script>
+</head>
+<body>
+
+<input type="text" id="score" value=100>
+<br>
+<button onclick="isPass(eval(score.value))">isPass</button>
+<br>
+<p id="result">You pass</p>
+
+</body>
+</html>

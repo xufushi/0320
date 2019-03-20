@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script >
+		function sad(){
+			document.getElementById('myImage').src='sadPic.jpg'
+		}
+		function happy(){
+			document.getElementById('myImage').src='happyPic.jpg'
+		}
+	</script>
+</head>
+<body>
+	
+	<h2>What Can JavaScript Do?</h2>
+	<p>JavaScript can change HTML attribute values.</p>
+	<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+	<button onclick="sad()">Sad</button>
+
+	<img id="myImage" src="sadPic.jpg" >
+
+	<button onclick="happy()">Happy</button>
+
+
+</body>
+</html>

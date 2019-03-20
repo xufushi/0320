@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+	<script >
+			
+		
+		function isPass(grade){
+			var is_pass;
+			if(grade >=60){
+				is_pass="You pass";
+			}else  {
+				is_pass="You flunk";
+			}
+			document.getElementById("result").innerHTML=is_pass;
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.fillStyle = "#FF0000";
+			ctx.fillRect(0, 0, 30, 600);
+			ctx.clearRect(0,0,30,600*((100-grade)/100));
+		}
+	</script>
+	
+	
+</head>
+<body>
+
+<input type="text" id="score" value=100>
+<br>
+<button onclick="isPass(eval(score.value))">isPass</button>
+<br>
+<p id="result">You pass</p>
+<br>
+
+<canvas id="myCanvas" width="30px" height="600px" ></canvas>
+
+		
+		
+	
+
+</body>
+</html>

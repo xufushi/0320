@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+	
+<script >
+	function add(a,b) {
+		document.getElementById("result").innerHTML=a+b;
+		// body...
+	}
+	function minus(a,b) {
+		document.getElementById("result").innerHTML=a-b;
+		// body...
+	}
+	function mutiply(a,b) {
+		document.getElementById("result").innerHTML=a*b;
+		// body...
+	}
+	function divide(a,b) {
+		document.getElementById("result").innerHTML=a/b;
+		// body...
+	}
+	function clearText(){
+		document.getElementById('num1').value= "";
+		document.getElementById('num2').value= "";
+		document.getElementById("result").value= "";
+	}
+
+</script>
+<input type="text" id="num1" value=3>
+<br>
+<button onclick="add(eval(num1.value),eval(num2.value))">+</button>
+<button onclick="minus(eval(num1.value),eval(num2.value))">-</button>
+<button onclick="mutiply(eval(num1.value),eval(num2.value))">*</button>
+<button onclick="divide(eval(num1.value),eval(num2.value))">/</button>
+<button onclick="clearText()">clear</button>
+<br>
+<input type="text" id="num2" value=6 >
+
+<h6>Result:</h6>
+<output id="result"></output>
+
+</body>
+</html>

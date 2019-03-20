@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	
+</head>
+<body>
+	<canvas id="myCanvas"></canvas>
+
+	<script >
+	var c = document.getElementById("myCanvas");
+	var ctx = c.getContext("2d");
+	ctx.fillStyle = "#FF0000";
+	ctx.fillRect(0, 0, 300, 600);
+	ctx.clearRect(10, 10, 30, 60);
+	var xright=10,right=1,xleft=300;
+	setInterval(function (){
+		if(right==1){
+			ctx.clearRect(xright++, 10, 30, 60);
+			ctx.fillRect(xright-1, 10, 1, 60);
+			if (xright>=270) {right=0;xright=0;}
+		}else{
+			ctx.fillRect(--xleft, 10, 1, 60);
+			ctx.clearRect(xleft-30, 10, 30, 60);
+			if (xleft<=30) {right=1;xleft=300;}
+		}
+	},10);	
+	</script>
+	
+</body>
+</html>
